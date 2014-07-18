@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+body .container {
+    margin-top: 20px;
+}
+.jumbotron {
+    min-height: 381px;
+}
+.jumbotron > div {
+    max-height: 186px;
+    overflow-y: auto;
+    font-family: 'Vollkorn', serif;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+.card-img {
+    margin-right: 40px;
+}
+#input-field input {
+    width: 100%;
+    font-size: 24pt;
+}
+#candidates img {
+    width: 91px;
+    height: 140px;
+    cursor: pointer;
+}
+.card-type.no-child, .card-type div {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px 5px 3px 5px;
+    margin-right: 3px;
+    background-color: #333;
+    color: white;
+}
