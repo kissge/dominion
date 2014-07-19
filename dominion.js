@@ -20,21 +20,24 @@ $(function ()
                   } else {
                       candidates = hist.filter(function (v, i) { return hist.indexOf(v) == i; });
                   }
-                  $('#candidates').html('');
+                  var anime = $('#candidates *').length != candidates.length;
+                  $('#candidates *').remove();
                   for (var i = 0; i < candidates.length; i++)
                   {
                       $('<img/>')
                           .attr('src', cards[candidates[i]].img)
                           .attr('title', candidates[i])
                           .data('name', candidates[i])
-                          .appendTo($('#candidates'));
+                          .appendTo($('#candidates'))
+                          .hide()
+                          .fadeIn(anime ? 'fast' : 0);
                   }
 
                   if (candidates.length == 1) {
                       $('#candidates img').click();
                   }
               })
-          .click();
+          .focus();
 
       $(document).on('click', '#candidates img', function () { var n = $(this).data('name'); hist.push(n); show(n); });
 
