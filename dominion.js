@@ -40,6 +40,13 @@ $(function ()
           .focus();
 
       $(document).on('click', '#candidates img', function () { var n = $(this).data('name'); hist.push(n); show(n); });
+      $(document).on('dblclick', '#candidates img',
+                     function ()
+                     {
+                         var n = $(this).data('name');
+                         hist = hist.filter(function (x) { return x != n; });
+                         $(this).fadeOut();
+                     });
 
       function show(name)
       {
